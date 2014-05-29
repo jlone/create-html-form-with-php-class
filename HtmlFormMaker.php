@@ -26,18 +26,18 @@ class HtmlFormMaker
 	    return '<label for="'.$name.'">'.$name.'</label> : ';
 	}
 
-    public function form_input($type, $name, $placeholder){
+    public function form_input($type, $name, $id, $placeholder){
 		
-		return '<input type="'.$type.'" name="'.$name.'" id="'.$name.'" placeholder="'.$placeholder.'"">';
+		return '<input type="'.$type.'" name="'.$name.'" id="'.$id.'" placeholder="'.$placeholder.'"">';
 	}
 
-	public function form_textarea($name, $placeholder){
-			return '<textarea name="'.$name.'" placeholder="'.$placeholder.'"></textarea>';
+	public function form_textarea($name, $id, $placeholder){
+			return '<textarea name="'.$name.'" id="'.$id.'" placeholder="'.$placeholder.'"></textarea>';
 	}
 
-	public function form_button($type, $text){
+	public function form_button($type, $id, $text){
 		
-		return '<input type="'.$type.'" value="'.$text.'">';
+		return '<input type="'.$type.'" id="'.$id.'" value="'.$text.'">';
 	}
 
 	public function form_close(){
